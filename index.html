@@ -16,11 +16,17 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #f7f5f3;
+            background: #f7f5f2;
             color: #171717;
         }
+
+        /* TOPO */
 
         .topo {
             padding: 22px 20px;
@@ -29,118 +35,199 @@
         }
 
         .logo {
-            font-size: 26px;
+            font-size: 27px;
             font-weight: 800;
-            letter-spacing: 2px;
+            letter-spacing: 3px;
         }
 
         .subtitulo {
-            margin-top: 5px;
-            font-size: 13px;
+            margin-top: 6px;
+            font-size: 12px;
             color: #777;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
         }
 
+        /* HERO */
+
         .hero {
-            padding: 70px 22px;
+            padding: 70px 22px 60px;
             text-align: center;
-            background: #e9e4df;
+            background: #e9e3dd;
         }
 
         .hero h1 {
-            font-size: 42px;
+            font-size: 43px;
             line-height: 1.05;
             margin-bottom: 18px;
+            letter-spacing: -1px;
         }
 
         .hero p {
             max-width: 600px;
             margin: 0 auto 28px;
             font-size: 17px;
+            line-height: 1.6;
             color: #555;
         }
 
         .botao {
             display: inline-block;
-            padding: 15px 28px;
+            padding: 16px 30px;
             background: #171717;
             color: #ffffff;
             text-decoration: none;
             border-radius: 4px;
             font-weight: bold;
-            font-size: 14px;
-            letter-spacing: .5px;
+            font-size: 13px;
+            letter-spacing: .8px;
+            transition: .2s;
         }
 
+        .botao:hover {
+            opacity: .8;
+        }
+
+        /* CÓDIGO */
+
         .codigo-area {
-            padding: 50px 20px;
+            padding: 55px 20px;
             text-align: center;
             background: #ffffff;
         }
 
         .codigo-area h2 {
-            font-size: 26px;
+            font-size: 27px;
             margin-bottom: 12px;
         }
 
         .codigo-area p {
             color: #666;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
 
         .codigo {
             display: inline-block;
-            padding: 16px 30px;
-            margin-bottom: 20px;
+            padding: 16px 32px;
+            margin-bottom: 22px;
             border: 2px dashed #171717;
             font-size: 30px;
             font-weight: 800;
-            letter-spacing: 3px;
+            letter-spacing: 4px;
         }
 
-        .sobre {
-            padding: 55px 22px;
+        /* VITRINE */
+
+        .vitrine {
+            padding: 60px 20px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .titulo-vitrine {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .titulo-vitrine h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .titulo-vitrine p {
+            color: #666;
+        }
+
+        .looks {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 22px;
+        }
+
+        .look {
+            background: #ffffff;
+            overflow: hidden;
+        }
+
+        .look img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+
+        .look-info {
+            padding: 22px;
             text-align: center;
         }
 
+        .look-info h3 {
+            font-size: 21px;
+            margin-bottom: 8px;
+        }
+
+        .look-info p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        /* SOBRE */
+
+        .sobre {
+            padding: 60px 22px;
+            text-align: center;
+            background: #ebe6e1;
+        }
+
         .sobre h2 {
-            font-size: 28px;
-            margin-bottom: 15px;
+            font-size: 29px;
+            margin-bottom: 16px;
         }
 
         .sobre p {
             max-width: 650px;
             margin: auto;
             color: #555;
-            line-height: 1.7;
+            line-height: 1.8;
         }
+
+        /* AVISO */
 
         .aviso {
             margin: 30px 20px;
             padding: 18px;
             text-align: center;
             font-size: 13px;
+            line-height: 1.6;
             color: #666;
             background: #eeeae6;
             border-radius: 8px;
         }
 
+        /* RODAPÉ */
+
         footer {
-            padding: 30px 20px;
+            padding: 32px 20px;
             text-align: center;
             background: #171717;
             color: #ffffff;
             font-size: 13px;
         }
 
-        @media (max-width: 600px) {
+        /* CELULAR */
+
+        @media (max-width: 700px) {
+
             .hero h1 {
-                font-size: 36px;
+                font-size: 37px;
+            }
+
+            .looks {
+                grid-template-columns: 1fr;
             }
 
             .codigo {
-                font-size: 25px;
+                font-size: 26px;
             }
         }
     </style>
@@ -153,13 +240,14 @@
         <div class="subtitulo">Consultora Dress To</div>
     </header>
 
+
     <section class="hero">
 
         <h1>Seu estilo.<br>Suas escolhas.</h1>
 
         <p>
-            Descubra minhas escolhas favoritas e encontre
-            seus próximos looks na Dress To.
+            Descubra minhas escolhas favoritas da Dress To
+            e encontre seu próximo look.
         </p>
 
         <a href="#codigo" class="botao">
@@ -168,12 +256,14 @@
 
     </section>
 
+
     <section class="codigo-area" id="codigo">
 
-        <h2>✨ Código promocional</h2>
+        <h2>✨ Código da Tamy</h2>
 
         <p>
-            Use meu código no site da Dress To.
+            Use meu código no site da Dress To
+            para aproveitar o benefício disponível.
         </p>
 
         <div class="codigo">
@@ -188,26 +278,100 @@
 
     </section>
 
+
+    <section class="vitrine">
+
+        <div class="titulo-vitrine">
+
+            <h2>Escolhas da Tamy</h2>
+
+            <p>
+                Alguns dos meus looks favoritos.
+            </p>
+
+        </div>
+
+
+        <div class="looks">
+
+            <article class="look">
+
+                <img
+                    src="look01.jpeg"
+                    alt="Look selecionado pela consultora Tamy">
+
+                <div class="look-info">
+
+                    <h3>Look em destaque</h3>
+
+                    <p>
+                        Uma escolha especial para compor
+                        um visual moderno e elegante.
+                    </p>
+
+                    <a href="#" class="botao">
+                        VER NA DRESS TO
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="look">
+
+                <img
+                    src="look02.jpeg"
+                    alt="Look selecionado pela consultora Tamy">
+
+                <div class="look-info">
+
+                    <h3>Minha escolha</h3>
+
+                    <p>
+                        Uma combinação que une estilo,
+                        leveza e personalidade.
+                    </p>
+
+                    <a href="#" class="botao">
+                        VER NA DRESS TO
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
     <section class="sobre">
 
         <h2>Olá, eu sou a Tamy</h2>
 
         <p>
-            Sou consultora Dress To e criei este espaço para
-            compartilhar minhas peças, looks e escolhas favoritas.
+            Sou consultora Dress To e criei este espaço
+            para compartilhar minhas peças e looks favoritos.
             Espero ajudar você a encontrar aquele look especial.
         </p>
 
     </section>
 
+
     <div class="aviso">
+
         Este é um espaço pessoal da consultora Tamy.
-        Para realizar sua compra, você será direcionada ao
-        site oficial da Dress To.
+        Para realizar sua compra, você será direcionada
+        ao site oficial da Dress To.
+
     </div>
 
+
     <footer>
+
         © 2026 Consultora Tamy Dress To
+
     </footer>
 
 </body>
