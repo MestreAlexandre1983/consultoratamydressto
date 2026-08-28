@@ -190,6 +190,110 @@
             color: #555;
             line-height: 1.8;
         }
+        /* SOBRE A TAMY */
+
+.sobre {
+    padding: 80px 22px;
+    background: #ebe6e1;
+}
+
+.sobre-conteudo {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.sobre-texto {
+    text-align: left;
+}
+
+.sobre-label {
+    display: block;
+    margin-bottom: 14px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #777;
+}
+
+.sobre h2 {
+    font-size: 38px;
+    margin-bottom: 22px;
+}
+
+.sobre p {
+    max-width: 500px;
+    margin-bottom: 16px;
+    color: #555;
+    line-height: 1.8;
+}
+
+.sobre-fotos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+    align-items: center;
+}
+
+.sobre-fotos img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.sobre-fotos img:first-child {
+    margin-top: 30px;
+}
+
+.mini-codigo {
+    margin-top: 28px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 18px;
+    background: #ffffff;
+}
+
+.mini-codigo span {
+    font-size: 13px;
+    color: #666;
+}
+
+.mini-codigo strong {
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+/* CELULAR */
+
+@media (max-width: 700px) {
+
+    .sobre-conteudo {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .sobre-texto {
+        text-align: center;
+    }
+
+    .sobre p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .sobre-fotos {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+
+    .sobre-fotos img:first-child {
+        margin-top: 20px;
+    }
+}
 
         /* AVISO */
 
@@ -348,15 +452,48 @@
 
     <section class="sobre">
 
-        <h2>Olá, eu sou a Tamy</h2>
+    <div class="sobre-conteudo">
 
-        <p>
-            Sou consultora Dress To e criei este espaço
-            para compartilhar minhas peças e looks favoritos.
-            Espero ajudar você a encontrar aquele look especial.
-        </p>
+        <div class="sobre-texto">
 
-    </section>
+            <span class="sobre-label">CONHEÇA A TAMY</span>
+
+            <h2>Olá, eu sou a Tamy</h2>
+
+            <p>
+                Sou consultora Dress To e criei este espaço
+                para compartilhar minhas peças, looks e escolhas
+                favoritas.
+            </p>
+
+            <p>
+                Aqui você encontra inspirações para diferentes
+                momentos, sempre com muito estilo e personalidade.
+            </p>
+
+            <div class="mini-codigo">
+                <span>Meu código:</span>
+                <strong>38TA</strong>
+            </div>
+
+        </div>
+
+
+        <div class="sobre-fotos">
+
+            <img
+                src="tamy-01.jpeg"
+                alt="Tamy, consultora Dress To">
+
+            <img
+                src="tamy-02.jpeg"
+                alt="Tamy usando um look Dress To">
+
+        </div>
+
+    </div>
+
+</section>
 
 
     <div class="aviso">
