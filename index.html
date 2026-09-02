@@ -87,6 +87,18 @@
         .botao:hover {
             opacity: .8;
         }
+        .botao-copiar {
+    border: none;
+    cursor: pointer;
+}
+
+.mensagem-codigo {
+    margin-top: 14px;
+    font-size: 14px;
+    font-weight: bold;
+    opacity: 0;
+    transition: opacity .3s;
+}
 
         /* CÓDIGO */
 
@@ -371,16 +383,25 @@
         </p>
 
         <div class="codigo">
-            38TA
-        </div>
+    <span id="codigoTamy">38TA</span>
+</div>
 
-        <br>
+<br>
 
-        <a href="https://www.dressto.com.br/" 
+<button class="botao botao-copiar" onclick="copiarCodigo()">
+    COPIAR CÓDIGO 38TA
+</button>
+
+<br><br>
+
+<a href="https://www.dressto.com.br/" 
    class="botao"
    target="_blank"
    rel="noopener noreferrer">
     COMPRAR NA DRESS TO
+</a>
+
+<p id="mensagemCodigo" class="mensagem-codigo"></p>
 </a>
 
     </section>
@@ -516,6 +537,21 @@
         © 2026 Consultora Tamy Dress To
 
     </footer>
+<script>
+function copiarCodigo() {
+    const codigo = "38TA";
 
+    navigator.clipboard.writeText(codigo).then(function() {
+        const mensagem = document.getElementById("mensagemCodigo");
+
+        mensagem.textContent = "✓ Código 38TA copiado!";
+        mensagem.style.opacity = "1";
+
+        setTimeout(function() {
+            mensagem.style.opacity = "0";
+        }, 2500);
+    });
+}
+</script>
 </body>
 </html>
