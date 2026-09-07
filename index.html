@@ -568,6 +568,10 @@ function copiarCodigo() {
     const codigo = "38TA";
 
     navigator.clipboard.writeText(codigo).then(function() {
+        
+        gtag('event', 'copiar_codigo', {
+    'codigo': '38TA'
+});
         const mensagem = document.getElementById("mensagemCodigo");
 
         mensagem.textContent = "✓ Código 38TA copiado!";
